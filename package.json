@@ -1,0 +1,22 @@
+{
+  "name": "jest-another-rpg",
+  "version": "1.0.0",
+  "description": "role play game",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamimimtiaz/jest-another-RPG.git"
+  },
+  "author": "shamim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shamimimtiaz/jest-another-RPG/issues"
+  },
+  "homepage": "https://github.com/shamimimtiaz/jest-another-RPG#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
