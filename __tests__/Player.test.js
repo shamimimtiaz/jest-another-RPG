@@ -60,3 +60,32 @@ test('creates a player object', () => {
   player.reduceHealth(99999);
   expect(player.health).toBe(0);
   });
+
+  //the tests and method to get a player's attack value.
+
+  test("gets player's attack value", () => {
+    const player = new Player('Dave');
+    player.strength = 10;
+    expect(player.getAttackValue()).toBeGreaterThanOrEqual(5);
+    expect(player.getAttackValue()).toBeLessThanOrEqual(15);
+  });
+
+  // write a test to add a new potion
+
+  test('adds a potion to the inventory', () => {
+    const player = new Player('Dave');
+    const oldCount = player.inventory.length;
+    player.addPotion(new Potion());
+   expect(player.inventory.length).toBeGreaterThan(oldCount);
+  });
+//When a Player drinks a Potion, the potion needs to be removed from their inventory and their stats need to be adjusted accordingly.
+//write tests that ensure that usePotion() removes the correct Potion from the Player inventory. 
+//What is the correct Potion? Eventually, our Player will select which Potion to use from the inventory.
+
+test('uses a potion from inventory', () => {
+  const player = new Player('Dave');
+  player.inventory = [new Potion(), new Potion(), new Potion()];
+  const oldCount = player.inventory.length;
+  player.usePotion(1);
+  expect(player.inventory.length).toBeLessThan(oldCount);
+});
